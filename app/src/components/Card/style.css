@@ -1,0 +1,15 @@
+.images {
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+#poster-container-home {
+    width: 90%;
+    margin: 3% auto 3% auto;
+}
+
+.poster-main {
+    width: 20%;
+}
+

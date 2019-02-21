@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "21 Years: Quentin Tarantino",
+        "image": "/assets/images/posters/21YQT_keyart.jpg"
+    },
+    {
+        "id": 2,
+        "name": "21 Years: Richard Linklater",
+        "image": "/assets/images/posters/21YRL_keyart.jpg"
+    },
+    {
+        "id": 3,
+        "name": "3 Days",
+        "image": "/assets/images/posters/3Days_keyart.jpg"
+    },
+    {
+        "id": 6,
+        "name": "House Hunting",
+        "image": "/assets/images/posters/HH_keyart.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Zombex",
+        "image": "/assets/images/posters/zombex_keyart.jpg"
+    }
+]

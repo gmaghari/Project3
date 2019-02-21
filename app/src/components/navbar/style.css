@@ -1,0 +1,30 @@
+.navbar { 
+    height: 100px;
+    border-bottom: 3px solid darkred;
+    background-color:black !important;
+    padding: 0px;
+    margin-bottom: 3%;
+}
+
+.navbar-collapse {
+    width: 100%;
+    position: absolute;
+    bottom: 0px
+}
+
+#wood-entertainment-title {
+    position: relative;
+    width: 100%;
+}
+
+#main-logo, #wood-entertainment-title {
+    height: 100%;
+}
+
+.nav-item {
+    font-size: 1.2em;
+}
+
+#wood-title {
+    color: white;
+}

@@ -1,0 +1,74 @@
+/*  Avails form */
+.avails-form-list {
+    border: 1px solid black;
+    height: 600px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.avails-group {
+    border: 1px solid blue;
+
+}
+
+.avails-list-item {
+    border: 1px solid blue;
+}
+/* ===========================================*/
+
+
+
+/* Submission form */
+.submission-main-card {
+    margin-top: 10%;
+    width: 400px;
+    text-align: center;
+    border: 1px solid lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+#sub-title {
+    height: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: darkred;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.submission-form-list {
+    height: 620px;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+.submission-list-item {
+    background-color: white;
+    padding: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 96%;
+    margin: 2% auto 2% auto;
+}
+
+#theMovie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid darkred;
+    margin-bottom: 1%;
+}
+
+#imdb, #cast, #hd {
+    margin-bottom: 5%;
+}
+
+#theInfo {
+    border-bottom: 1px solid darkred;
+    margin-bottom: 2%;
+}

@@ -1,0 +1,18 @@
+img {
+    height: 20pc;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+#library-row {
+    display: flex;
+    justify-content: center;
+}
+
+h6 {
+    text-align: center;
+}
+
+/* .Container {
+    align-self: center;
+} */

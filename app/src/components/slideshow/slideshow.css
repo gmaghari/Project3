@@ -1,0 +1,17 @@
+.carousel-control-prev-icon, 
+.carousel-control-next-icon 
+{
+     visibility:hidden;
+}
+
+.carousel-indicators {
+    visibility: hidden;
+}
+
+.carousel-container {
+    /* border: 1px solid darkred; */
+    margin: auto;
+    max-width: 90%;
+}
+
+

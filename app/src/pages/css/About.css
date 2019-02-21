@@ -1,0 +1,12 @@
+#main-about-container {
+    border: 1px solid lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    padding: 3%;
+    margin: 3% 0 10%;
+    
+}
+
+#about-col1, #about-col2 {
+    text-align: justify;
+}
