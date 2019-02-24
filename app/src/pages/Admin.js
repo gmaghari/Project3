@@ -9,6 +9,9 @@ import Modal from "react-bootstrap/Modal"
 import Button from "react-bootstrap/Button"
 import DeleteBtn from "../components/DeleteBtn/delete.js"
 import UpdateBtn from "../components/UpdateBtn/update.js"
+import Table from 'react-bootstrap/Table'
+import "./css/Admin.css";
+
 
 
 class Admin extends Component {
@@ -16,6 +19,7 @@ state = {
         countries,
         show: false,
         show1: false,
+        idSearch: "",
         pageLoad: [],
         submissions: [],
         singleLoad: [],
@@ -77,7 +81,55 @@ componentDidMount(){
 loadMoviesForSale = () => {
     api.getAdminFilm()
     .then(res =>
-        this.setState({ pageLoad: res.data, movieTitle: ""})
+        this.setState({ 
+        idSearch: "",
+        pageLoad: res.data, 
+        movieTitle: "",         
+        ARGavailability: 'available',
+        AUSavailability: 'available',
+        BENavailability: 'available',
+        BRAavailability: 'available',
+        BULavailability: 'available',
+        CHAavailability: 'available',
+        CHLavailability: 'available',
+        CISavailability: 'available',
+        COLavailability: 'available',
+        CZEavailability: 'available',
+        DRavailability: 'available',
+        FINavailability: 'available',
+        FRAavailability: 'available',
+        GERavailability: 'available',
+        GREavailability: 'available',
+        HKavailability: 'available',
+        HUNavailability: 'available',
+        INDavailability: 'available',
+        INDOavailability: 'available',
+        ISRavailability: 'available',
+        ITAavailability: 'available',
+        JAPavailability: 'available',
+        KORavailability: 'available',
+        LAMavailability: 'available',
+        MALavailability: 'available',
+        MEavailability: 'available',
+        MEXavailability: 'available',
+        NORavailability: 'available',
+        PHIavailability: 'available',
+        POLavailability: 'available',
+        PORavailability: 'available',
+        PRUavailability: 'available',
+        ROMavailability: 'available',
+        SAFavailability: 'available',
+        SINavailability: 'available',
+        SPAavailability: 'available',
+        SWEavailability: 'available',
+        TAIavailability: 'available',
+        THAavailability: 'available',
+        TURavailability: 'available',
+        UKavailability: 'available',
+        USavailability: 'available',
+        VENavailability: 'available',
+        YUGavailability: 'available',
+        })
         )
         .catch(err => console.log(err));
 }
@@ -85,14 +137,8 @@ loadMoviesForSale = () => {
 getFilmByID = (id) => {
     api.getAdminFilmById(id)
     .then(res => 
-        this.setState({ singleLoad: res.data, movieTitle: "" }))
+        this.setState({ singleLoad: res.data, movieTitle: "", idSearch: res.data.id }))
         .then(
-            this.state.singleLoad.map(singleLoad => (
-                
-                    this.setState({ movieTitle: singleLoad.movieTitle})
-                
-            ))
-
         )
         .catch(err => console.log(err));
 }
@@ -105,8 +151,8 @@ deleteFilmForSale = id => {
     .catch(err => console.log(err));
 }
 
-updateFilmForSale = id => {
-    api.updateAdminFilm(id)
+updateFilmForSale = (id, data) => {
+    api.updateAdminFilm(id, data)
     .then(res => this.loadMoviesForSale())
     .catch(err => console.log(err));
 }
@@ -214,73 +260,120 @@ handleFormSubmit = event => {
         }
 }
 
+handleFormSubmit1 = (event, id) => {
+    event.preventDefault();
+    // if (this.state.singleLoad.movieTitle){
+        api.updateAdminFilm( {_id: this.state.idSearch}, {
+            movieTitle: this.state.singleLoad.movieTitle,
+            ARGavailability: this.state.singleLoad.ARGavailability,
+            AUSavailability: this.state.singleLoad.AUSavailability,
+            BENavailability: this.state.singleLoad.BENavailability,
+            BRAavailability: this.state.singleLoad.BRAavailability,
+            BULavailability: this.state.singleLoad.BULavailability,
+            CHAavailability: this.state.singleLoad.CHAavailability,
+            CHLavailability: this.state.singleLoad.CHLavailability,
+            CISavailability: this.state.singleLoad.CISavailability,
+            COLavailability: this.state.singleLoad.COLavailability,
+            CZEavailability: this.state.singleLoad.CZEavailability,
+            DRavailability: this.state.singleLoad.DRavailability,
+            FINavailability: this.state.singleLoad.FINavailability,
+            FRAavailability: this.state.singleLoad.FRAavailability,
+            GERavailability: this.state.singleLoad.GERavailability,
+            GREavailability: this.state.singleLoad.GREavailability,
+            HKavailability: this.state.singleLoad.HKavailability,
+            HUNavailability: this.state.singleLoad.HUNavailability,
+            INDavailability: this.state.singleLoad.INDavailability,
+            INDOavailability: this.state.singleLoad.INDOavailability,
+            ISRavailability: this.state.singleLoad.ISRavailability,
+            ITAavailability: this.state.singleLoad.ITAavailability,
+            JAPavailability: this.state.singleLoad.JAPavailability,
+            KORavailability: this.state.singleLoad.KORavailability,
+            LAMavailability: this.state.singleLoad.LAMavailability,
+            MALavailability: this.state.singleLoad.MALavailability,
+            MEavailability: this.state.singleLoad.MEavailability,
+            MEXavailability: this.state.singleLoad.MEXavailability,
+            NORavailability: this.state.singleLoad.NORavailability,
+            PHIavailability: this.state.singleLoad.PHIavailability,
+            POLavailability: this.state.singleLoad.POLavailability,
+            PORavailability: this.state.singleLoad.PORavailability,
+            PRUavailability: this.state.singleLoad.PRUavailability,
+            ROMavailability: this.state.singleLoad.ROMavailability,
+            SAFavailability: this.state.singleLoad.SAFavailability,
+            SINavailability: this.state.singleLoad.SINavailability,
+            SPAavailability: this.state.singleLoad.SPAavailability,
+            SWEavailability: this.state.singleLoad.SWEavailability,
+            TAIavailability: this.state.singleLoad.TAIavailability,
+            THAavailability: this.state.singleLoad.THAavailability,
+            TURavailability: this.state.singleLoad.TURavailability,
+            UKavailability: this.state.singleLoad.UKavailability,
+            USavailability: this.state.singleLoad.USavailability,
+            VENavailability: this.state.singleLoad.VENavailability,
+            YUGavailability: this.state.singleLoad.YUGavailability
+        }).then(res => this.loadMoviesForSale())
+        .catch(err => console.log(err));
+        }
+// }
 
 
-
+ 
 render(){
     return(
-    <Container fluid>
+        <Col size="lg-12">
+            <Row>
+                <Col size="lg-6">
 
-<Button variant="primary" onClick={this.handleShow}>
-    Add Movie to DB
-</Button>
-        <Row>
-        <Col size="m-6">
-                <h6>Display from DB</h6>
-            {this.state.pageLoad.length ? (
-            <List>
-            <Row>   
-                <Col size="m-2">
-                    <h6>Available Countries</h6>
-                </Col>
-                
-                {/* map a column for every movie in db */}
-                {this.state.pageLoad.map(pageLoad =>(
-                <Col size="m-2">
-                    <p>{pageLoad.movieTitle}</p>
-                </Col>
-                ))}
-            </Row>  
+                <div className="avails-outer">
+                <div className="avails-header">
+                    <h1>Film Availability</h1>
+                    <Button className="add-movie-button" variant="primary" onClick={this.handleShow}>Add Movie to DB</Button>
+                </div>
+                <table class="table table-striped table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Territories</th>
+                            {this.state.pageLoad.map(pageLoad => (
 
-            <Row>   
-                <Col size="m-2">
-                    <h6>_</h6>
-                    <ListDiv>
-                        {this.state.countries.map(countries=> (
-                            <p>{countries.name}</p>
-                        ))}
-                    </ListDiv>
-                </Col>
-                
-                {/* map a column for every movie in db */}
-                {this.state.pageLoad.map(pageLoad =>(
-                <Col size="m-2">
-                    <DeleteBtn 
-                        onClick={() => this.deleteFilmForSale(pageLoad._id)}
-                        // display={pageLoad.movieTitle} 
-                    >
-                    </DeleteBtn>
-                    <UpdateBtn
-                        onClick={(event) => {this.handleShow1(); this.getFilmByID(pageLoad._id)}}
-                        // onClick={() => this.handleShow1()}
-                    >
-                    </UpdateBtn>
-
-                    <ListDiv key={pageLoad._id}>
-                        {this.state.countries.map(countries => (
-                            <p>{pageLoad[countries.st]}</p>
+                                <th scope="col">{pageLoad.movieTitle}</th>
                             ))}
-                    </ListDiv>
-                </Col>
-                ))}
-            </Row>  
-        
-            </List>
-            ) : (
-                <h3> No results</h3>
-            )}
-        </Col>
-        <Col size="md-4">
+                        </tr>
+                        <tr>
+                            <th scope="col"></th>
+                            {this.state.pageLoad.map(pageLoad => (
+                                <th scope="col"> 
+                                <DeleteBtn 
+                                    onClick={() => this.deleteFilmForSale(pageLoad._id)}    
+                                    >
+                                </DeleteBtn>
+                                <UpdateBtn
+                                    onClick={(event) => {this.handleShow1(); this.getFilmByID(pageLoad._id)}}
+                                    >
+                                </UpdateBtn>
+                                </th>
+                            ))}
+                        </tr>
+
+                    </thead>
+                        <tbody>
+                        {this.state.countries.map(countries => (
+                            <tr>
+                                <th scope="row">{countries.name}</th>
+                        {this.state.pageLoad.map(pageLoad => (   
+                                <td>{pageLoad[countries.st]}</td>
+                            ))}
+                            </tr>
+                            ))}
+                        </tbody>
+
+                    </table>
+                </div>
+            </Col>
+
+
+            
+        <Col size="lg-2"></Col>
+
+
+        <Col size="lg-4">
         <div className="submission-main-card">
               <div id="sub-title">
                 <h1>Film Submissions</h1>
@@ -356,9 +449,9 @@ render(){
               <h3> No Result</h3>
             )}  
             </div>
-
+            
         </Col>
-    </Row>
+
 
 
 {/* MODAL For Add Movie to DB */}
@@ -407,21 +500,22 @@ render(){
     <Modal.Footer>
         <FormBtn
             disabled={!(this.state.movieTitle)}
-            onClick={this.handleFormSubmit}
+            onClick={(event) => {this.handleFormSubmit(event); this.handleClose(); this.loadMoviesForSale()}}
             
             >
             Submit Movie
         </FormBtn>     
     </Modal.Footer>
 </Modal>
-    
 
+   
+ 
 {/* MODAL FOR UPDATE MOVIE */}
 
 <Modal show={this.state.show1} onHide={this.handleClose1}>
     
     <Modal.Header closeButton>
-    <Modal.Title>Update Movie No On Click No Get</Modal.Title>
+    <Modal.Title>Update Movie</Modal.Title>
     </Modal.Header>
     <Modal.Body>
         <Row>        
@@ -446,6 +540,8 @@ render(){
         {this.state.countries.map(countries =>(
             <ListDiv key={countries.id}>
                 {countries.name}
+                
+                
             <Input value={this.state.singleLoad[countries.st]} onChange={this.handleInputChange1} name={countries.st} placeholder='Available' />
 
             </ListDiv>
@@ -465,18 +561,17 @@ render(){
 
     <Modal.Footer>
         <FormBtn
+            key={this.state.singleLoad._id}
             
-            onClick={this.handleFormSubmit}
-            
+            onClick={(event) => {this.handleFormSubmit1(event, this.state.singleLoad._id); this.handleClose1(); this.loadMoviesForSale()}}
             >
             Submit Movie
         </FormBtn>     
     </Modal.Footer>
 </Modal>
 
-
-    
-    </Container>
+        </Row>
+    </Col>
     )
     }
 

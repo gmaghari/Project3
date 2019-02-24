@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from '../src/components/navbar/navbar';
-import Footer from '../src/components/Footer/footer';
+import Navbar from '../src/components/Navbar/navbar';
+
 
 
 class App extends Component {
@@ -9,7 +9,6 @@ class App extends Component {
     return ( 
       <div>
         <Navbar />
-        {/* <Footer /> */}
       </div>
     );
   }

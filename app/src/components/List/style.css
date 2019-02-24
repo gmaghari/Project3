@@ -1,4 +1,4 @@
-/*  Avails form */
+ /* Avails form
 .avails-form-list {
     border: 1px solid black;
     height: 600px;
@@ -13,19 +13,20 @@
 
 .avails-list-item {
     border: 1px solid blue;
-}
+} */
 /* ===========================================*/
 
 
 
 /* Submission form */
 .submission-main-card {
-    margin-top: 10%;
+    margin-top: 2%;
     width: 400px;
     text-align: center;
     border: 1px solid lightgray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
+    background-color: #35393e;
 }
 
 #sub-title {

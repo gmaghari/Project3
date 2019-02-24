@@ -9,7 +9,7 @@
     {"id":8,"abbr": "CIS","name": "CIS","st":"CISavailability"},
     {"id":9,"abbr": "COL","name": "Colombia","st":"COLavailability"},
     {"id":10,"abbr": "CZE","name": "Czech","st":"CZEavailability"},
-    {"id":11,"abbr": "DR","name": "Domincan Republic","st":"DRavailability"},
+    {"id":11,"abbr": "DR","name": "Dominican Rep.","st":"DRavailability"},
     {"id":12,"abbr": "FIN","name": "Finland","st":"FINavailability"},
     {"id":13,"abbr": "FRA","name": "France","st":"FRAavailability"},
     {"id":14,"abbr": "GER","name": "Germany","st":"GERavailability"},

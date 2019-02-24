@@ -3,10 +3,11 @@ import "../Footer/footer.css";
 
 const Footer = () => {
     return (  
-        <div className="footer">
+        <div className="footer" >
             <a href="/admin" id="admin-footer">© 2019 Wood Entertainment</a> 
-        </div> 
+        </div>
     );
   }
+
 
   export default Footer;  

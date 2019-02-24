@@ -39,10 +39,11 @@ exports.deleteFilm = function(req, res){
 
 exports.updateFilm = function(req, res){
   console.log("update request for film");
+  console.log(req.body);
   db
-  .findOneAndUpdate({_id: req.params.id}, req.body)
+  .findByIdAndUpdate({_id: req.params.id}, req.body, {new: true})
   .then(function(dbRes){
-    res.json(dbRes);
+    console.log("then function update");
   })
   .catch(err => res.status(422).json(err))
 }
