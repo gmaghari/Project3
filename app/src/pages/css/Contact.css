@@ -10,6 +10,7 @@ form {
     border-radius: 5px;
     padding: 3%;
     margin: 3% 0 10%;
+    
 }
 
 #frmbtn {
@@ -23,10 +24,16 @@ form {
     margin-bottom: 2%;
 }
 
+.submit-info {
+    line-height: 20px;
+}
+
 #sales-inquiries, #acquisitions {
     margin-bottom: 10%;
+    line-height: 10px;
 }
 
 #to-submit {
     margin-bottom: 3%;
+    text-align: justify;
 }

@@ -1,18 +1,14 @@
-img {
-    height: 20pc;
-    padding-left: 10px;
-    padding-right: 10px
+.card {
+    border: none;
 }
 
-#library-row {
-    display: flex;
-    justify-content: center;
+.img-poster {
+    display: block;
+    width: 100%;
+    height: 100%;
+   
 }
 
-h6 {
-    text-align: center;
+.poster-title {
+    color: black;
 }
-
-/* .Container {
-    align-self: center;
-} */

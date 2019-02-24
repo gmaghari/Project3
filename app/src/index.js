@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, BrowserRouter as Router, Redirect } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Home from './pages/Home';
@@ -10,14 +10,17 @@ import Markets from './pages/Markets';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
-import Details from './pages/Details';
+import FilmsPage from './pages/FilmsPage';
 import * as serviceWorker from './serviceWorker';
+import Navbar from '../src/components/Navbar/navbar';
+import Footer from '../src/components/Footer/footer';
 
 
 const routing = (
     <Router>
         <div>
-            <Route path="/" component={App} />
+            <Navbar />
+            <Route exact path="/" component={() => (<Redirect to='/home' />)} />
             <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/films" component={Films} />
@@ -25,7 +28,8 @@ const routing = (
             <Route path="/news" component={News} />
             <Route path="/contact" component={Contact} />
             <Route path="/admin" component={Admin} />
-            <Route path="/filmdetails/" component={Details} />
+            <Route path="/filmspage" component={FilmsPage} />
+            <Footer />
         </div>
     </Router>
 )

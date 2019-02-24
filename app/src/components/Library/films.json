@@ -2,41 +2,97 @@
     {
         "id": 1,
         "name": "21 Years: Quentin Tarantino",
-        "image": "/assets/images/posters/21YQT_keyart.jpg"
+        "image": "/assets/images/posters/21YQT_keyart.jpg",
+        "desc": "21YQT is the next film in the 21 Years series following 21 Years: Richard Linklater. The film will examine the first 21 years of Tarantino’s career (RESERVOIR DOGS to HATEFUL 8, drawing on the idea that the first 21 years of work defines the career of an artist, 21 Years: Quentin Tarantino chronicles the filmmaker from his trendsetting work on Reservoir Dogs and examines how his films have changed the movie making landscape forever.",
+        "year": "2016",
+        "status": "Production",
+        "cast": "Bruce Dern, Jamie Foxx, Samuel L. Jackson, Jennifer Jason Lee, Diane Kruger, Lucy Liu, Michael Madsen, Eli Roth, Tim Roth, Kurt Russell, Christoph Waltz, Bob Weinstein",
+        "director": "Tara Wood",
+        "duration": "N/A",
+        "format": "HD"
     },
     {
         "id": 2,
         "name": "21 Years: Richard Linklater",
-        "image": "/assets/images/posters/21YRL_keyart.jpg"
+        "image": "/assets/images/posters/21YRL_keyart.jpg",
+        "desc": "There ain’t no slacker in this slacker! Never has a filmmaker been as loved and influential on an entire generation as Richard Linklater. This fun, surprising and revealing documentary exposes the star studded line up, from Matthew McConaughey and his life-changing role to the making of Kevin Smith’s CLERKS to Madonna’s pap smear.",
+        "year": "2014",
+        "status": "Completed",
+        "cast": "Billy Bob Thornton, Ethan Hawke, Jack Black, Julie Delpy, Keanu Reeves, Matthew McConaughey",
+        "director": "Michael Dunaway & Tara Wood",
+        "duration": "117 Minutes",
+        "format": "HD"
     },
     {
         "id": 3,
         "name": "3 Days",
-        "image": "/assets/images/posters/3Days_keyart.jpg"
+        "image": "/assets/images/posters/3Days_keyart.jpg",
+        "desc": "Jeff is shot dead. He is given 3 days to go back to earth to judge his own life on whether he goes to heaven or hell. He wakes up on earth without any memories and in bed with a dead girl. This just got very interesting.",
+        "year": "2015",
+        "status": "Completed",
+        "cast": "Johnny Walter, Justin Street, Tina Rodriguez",
+        "director": "Julian Beltran",
+        "duration": "99 Minutes",
+        "format": "HD"
     },
     {
         "id": 4,
         "name": "Are You For Great Sex",
-        "image": "/assets/images/posters/AYFGS_keyart.jpg"
+        "image": "/assets/images/posters/AYFGS_keyart.jpg",
+        "desc": "A boundary-pushing, raw, and sophisticated sexual love story told from a uniquely fresh, woman's point of view. What is the meaning of great sex? Is it just a primal instinctual act? Both New Yorkers in consuming professions, they consider their relationship to be 'just' sexual and live out their separate lives. Shining a spotlight on what it means to have a connection that is both highly sexual and deeply soulful, Are You For Great Sex? comments on contemporary definitions of love.",
+        "year": "2010",
+        "status": "Completed",
+        "cast": "Jessica Caban, Walter Vincent",
+        "director": "Cynthia Hsuing",
+        "duration": "90 Minutes",
+        "format": "HD"
     },
     {
         "id": 5,
         "name": "Crimson Winter",
-        "image": "/assets/images/posters/CrimsonWinter_keyart.jpg"
+        "image": "/assets/images/posters/CrimsonWinter_keyart.jpg",
+        "desc": "Humans massacred their race, wrote them out of history, and pushed them into myth... Now in the midst of a Vampire civil war, an exiled Vampire prince has escaped into the mountains of the new America, building a hidden army for revenge against his family. Years later, in the dead of winter, a group of grad students start their research on the disappearance of wildlife in those very mountains. When they come close to the truth, they begin the fight for their own survival. As the fight escalates, the Vampire prince descends upon the conflict. He is forced to visit his dark past as the fates of the student's are decided.",
+        "year": "2013",
+        "status": "Completed",
+        "cast": "Bryan Ferriter,Nick Milodragovich, Paulie Redding",
+        "director": "Bryan Ferriter",
+        "duration": "110 Minutes",
+        "format": "HD"
     },
     {
         "id": 6,
         "name": "House Hunting",
-        "image": "/assets/images/posters/HH_keyart.jpg"
+        "image": "/assets/images/posters/HH_keyart.jpg",
+        "desc": "When two families realize they cannot leave a secluded real estate open house, they become pawns in a larger psychological game. After encountering a terrified, blood-spattered teenage girl in the driveway, the two families’ attempts to leave the foreclosed property only circle them back to the front door. Trapped in this purgatory, the familes are haunted by a vengeful former owner who proclaims that only one family will survive. The two patriarchs, Charlie Hays (Singer, The Beastmaster, V) and Don Thomson (LaFleur, Field of Dreams), try to work together to escape, but as the days stack up and the psychological torment builds, the families begin to turn against one another.",
+        "year": "2012",
+        "status": "Completed",
+        "cast": "Mark Singer",
+        "director": "Eric Hurt",
+        "duration": "102 Minutes",
+        "format": "HD"
     },
     {
         "id": 7,
         "name": "Mexican Sunrise",
-        "image": "/assets/images/posters/MS_keyart.jpg"
+        "image": "/assets/images/posters/MS_keyart.jpg",
+        "desc": "Based on a true story. Five friends went to Mexico for a bachelor party. Not all of them made it back.",
+        "year": "2006",
+        "status": "Completed",
+        "cast": "Armand Assante",
+        "director": "Rowdy Stovall",
+        "duration": "95 Minutes",
+        "format": "HD"
     },
     {
         "id": 8,
         "name": "Zombex",
-        "image": "/assets/images/posters/zombex_keyart.jpg"
+        "image": "/assets/images/posters/zombex_keyart.jpg",
+        "desc": "A classic American zombie film set in New Orleans about a pharmaceutical company giving pills to post Katrina stress victims. Charlie Thibideaux, a locally famous Zydeco player in New Orleans, slowly begins to discover why seemingly normal people become the undead, all signs pointing to the new experimental drug.",
+        "year": "2015",
+        "status": "Completed",
+        "cast": "Cory Feldman, Lew Temple, Malcolm McDowell, Sid Haig",
+        "director": "Jesse Dayton",
+        "duration": "120 Minutes",
+        "format": "HD"
     }
 ]

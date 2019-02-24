@@ -1,10 +1,11 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { Input, FormBtn } from "../components/Form";
 import { List1, ListDiv1 } from "../components/List/list-submit";
 import { Col, Row, Container } from "../components/Grid"
 import DeleteButton from "../components/DeleteBtn/delete";
 import "./css/Contact.css";
 import API from "../utils/api";
+import { Modal } from 'react-bootstrap';
 
 
 class FilmSubmission extends Component {
@@ -26,27 +27,23 @@ class FilmSubmission extends Component {
         runtime: "",
         format: "",
         digibeta: "",
-        hdmaster: ""
+        hdmaster: "",
+        show: false
     }
 
   componentDidMount() {
-    // this.loadFilms();
+    this.loadFilms();
   }
 
-  // loadFilms = () => {
-  //   API.getSubmission() 
-  //     .then(res => 
-  //       this.setState({ submissions: res.data, contactName: "" })
-  //     )
-  //     .catch(err => console.log(err));
-  // }
+  loadFilms = () => {
+    API.getSubmission() 
+      .then(res => 
+        this.setState({ submissions: res.data, contactName: "", email: "", contactNumber: "", company: "", imdb: "", title: "",
+        year: "", genre: "", country: "", producer: "", writer: "", director: "", cast: "", runtime: "", format: "", digibeta: "", hdmaster: "" })
+      )
+      .catch(err => console.log(err));
+  }
 
-  // deleteFilm = id => {
-  //   API.deleteFilm(id)
-  //   .then(res => this.loadFilms())
-  //   .catch(err => console.log(err));
-  // }
-  
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -79,6 +76,16 @@ class FilmSubmission extends Component {
       .catch(err => console.log(err));
   }
 
+  //
+  showModal = () => {
+    this.setState({ show: true})
+  }
+
+  hideModal = () => {
+    this.setState({ show: false})
+  }
+  //
+
   render() {
     return (
 
@@ -87,7 +94,7 @@ class FilmSubmission extends Component {
           <Col size="lg-12">
 
             <Row> 
-
+                
                 <Col size="lg-6">
                   <div id="sales-inquiries">
                     <h3>For SALES inquiries,</h3>
@@ -108,18 +115,20 @@ class FilmSubmission extends Component {
         
           <Col size="lg-12">
             <form>
-              <Row>
+              <Row>    
                 <Col size="lg-12">
                   <h1 id="filmSubTitle">Film Submission</h1>
                 </Col>
               </Row>
               <Row>
                 <Col size="lg-12">
-                  <p id="to-submit">To submit a film for consideration for US or International representation, please fill out the form below.<br></br>
-                  Do not include a link for the full screener of the film.
-                  We will contact you based on the information provided and a trailer, if applicable.
-                  Thank you,<br></br>
-                  Wood Entertainment</p>
+                  <div className="submit-info">
+                    <p id="to-submit">To submit a film for consideration for US or International representation, please fill out the form below.
+                    Do not include a link for the full screener of the film.</p>
+                    <p>We will contact you based on the information provided and a trailer, if applicable.</p>
+                    <p>Thank you,</p>
+                    <p>Wood Entertainment</p>
+                  </div>
                 </Col>
               </Row>
 
@@ -131,6 +140,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="contactName"
                     placeholder="Contact Name*"
+                    required=" "
                   />
                 </Col>
                 <Col size="lg-6">
@@ -139,6 +149,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="email"
                     placeholder="Email*"
+                    required=" "
                   />
                 </Col>
               </Row>
@@ -179,6 +190,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="title"
                     placeholder="Film Title*"
+                    required=" "
                   />
                 </Col>
               </Row>
@@ -191,6 +203,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="producer"
                     placeholder="Producer*"
+                    required=" "
                   />
                 </Col>
                 <Col size="lg-6">
@@ -211,6 +224,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="director"
                     placeholder="Director*"
+                    required=" "
                   />
                 </Col>
                 <Col size="lg-6">
@@ -231,6 +245,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="year"
                     placeholder="Production Year*"
+                    required=" "
                   />
                 </Col>
                 <Col size="lg-6">
@@ -239,6 +254,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="genre"
                     placeholder="Genre*"
+                    required=" "
                   />
                 </Col>
               </Row>
@@ -251,6 +267,7 @@ class FilmSubmission extends Component {
                     onChange={this.handleInputChange}
                     name="country"
                     placeholder="Country*"
+                    required=" "
                   />
                   </Col>
                 <Col size="lg-6">
@@ -289,7 +306,7 @@ class FilmSubmission extends Component {
                   />
                 </Col>
                 <Col size="lg-3">
-                  <FormBtn onClick={this.handleFormSubmit} id="frmbtn">
+                  <FormBtn onClick={(event) => {this.handleFormSubmit(event); this.loadFilms()}} id="frmbtn" onClick={this.showModal}>
                     Submit
                   </FormBtn>
                 </Col>
@@ -299,6 +316,7 @@ class FilmSubmission extends Component {
           </Col>
         </div>
       </Container>
+
     );
   }
 }

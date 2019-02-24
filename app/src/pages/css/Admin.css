@@ -1,0 +1,62 @@
+.avails-outer {
+    margin-top: 2%;
+    border: 1px solid lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    height: 700px;
+    overflow: scroll;
+    /* overflow: auto; */
+}
+
+.avails-header {
+    background-color: darkred;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 0 2% 0 2%; 
+}
+
+.avails-upper {
+    background-color: darkred;
+}
+
+#db-title {
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+} 
+
+.add-movie-button {
+    background-color:#35393e;
+    color: white;
+    border: lightgray;
+}
+
+.add-movie-button:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.delete-btn, .update-btn {
+    background-color:#35393e;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.update-btn:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.modal-dialog {
+    height: 806px;
+    overflow: scroll;
+    border-radius: 10px;
+}
